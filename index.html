@@ -2,6 +2,17 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17696983525"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17696983525');
+  </script>
+  <!-- Fim Google tag (gtag.js) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SPEEDPLAN Desenvolvimento — Excel e VBA Profissional</title>
   <meta name="description" content="Portfólio SPEEDPLAN Desenvolvimento: planilhas Excel e VBA sob medida, automação, design moderno e alto desempenho." />
@@ -23,8 +34,6 @@
     html,body{margin:0;padding:0;background: radial-gradient(1200px 800px at 80% -10%, rgba(57,255,20,0.10), transparent 60%), linear-gradient(180deg, #050505 0%, #0b0b0b 100%); color:var(--text); font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif; scroll-behavior:smooth}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-
-    /* Partículas */
     .particles{
       position:fixed; inset:0; z-index:-1; pointer-events:none; background:
         radial-gradient(2px 2px at 10% 20%, rgba(57,255,20,.22), transparent 60%),
@@ -33,12 +42,9 @@
         radial-gradient(2px 2px at 85% 60%, rgba(16,124,16,.18), transparent 60%);
       filter: blur(.2px);
     }
-
-    /* Cabeçalho fixo */
     header{position:sticky; top:0; z-index:50; background:rgba(5,5,5,.7); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--border)}
     .nav{max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:20px; padding:14px 20px}
     .logo{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.3px}
-    /* Ícone foguete com degradê verde/branco/preto */
     .rocket{
       width:36px; height:36px; border-radius:10px; position:relative; display:grid; place-items:center;
       background:
@@ -52,8 +58,6 @@
     nav ul{display:flex; list-style:none; margin:0; padding:0; gap:16px; flex:1}
     nav a{padding:8px 12px; border-radius:8px; color:#dff7e1; opacity:.9}
     nav a:hover{background:rgba(16,124,16,.13); box-shadow: inset 0 0 0 1px var(--border)}
-
-    /* CTA ÚNICO: degradê verde destacado + piscar suave */
     .cta-global{
       --g1:#25D366; --g2:#1db954; --g3:#107C10;
       background: linear-gradient(135deg, var(--g1), var(--g2) 40%, var(--g3));
@@ -75,48 +79,33 @@
       0%, 100% { box-shadow: 0 0 14px rgba(57,255,20,.45), 0 0 28px rgba(57,255,20,.18) inset; filter: brightness(1); }
       50% { box-shadow: 0 0 24px rgba(57,255,20,.9), 0 0 42px rgba(57,255,20,.35) inset; filter: brightness(1.06); }
     }
-    /* Acessibilidade: reduzir movimento quando preferido pelo usuário */
     @media (prefers-reduced-motion: reduce){
       .cta-global{animation: none}
     }
-
-    /* Hero e tipografia */
     .hero{max-width:1200px; margin:0 auto; padding:72px 20px 48px; display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
     .hero h1{font-size:clamp(2.1rem, 2.6vw + 1rem, 3.2rem); margin:.2rem 0 .6rem; line-height:1.12}
     .sub{color:var(--muted); font-weight:400; max-width:60ch}
     .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
     .badge{font-size:.85rem; color:#bfe9c3; background:rgba(16,124,16,.12); border:1px solid var(--border); padding:8px 10px; border-radius:999px; box-shadow: inset 0 0 12px rgba(16,124,16,.15)}
-
-    /* Cartões hero */
     .hero-card{background: linear-gradient(180deg, #0c0f0d, #0a0d0b); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow: 0 10px 40px rgba(0,0,0,.5), 0 0 30px rgba(16,124,16,.12); position:relative; overflow:hidden; isolation:isolate;}
     .glow{position:absolute; inset:auto -25% -25% auto; width:60%; height:60%; background: radial-gradient(35% 35% at 50% 50%, rgba(57,255,20,.25), transparent 70%); filter: blur(22px); z-index:-1}
     .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
     .mini{background:linear-gradient(180deg, #0b0f0c, #080b09); border:1px solid var(--border); border-radius:12px; padding:14px; display:flex; gap:10px; align-items:flex-start; min-height:88px}
     .ico{width:36px;height:36px; border-radius:9px; display:grid; place-items:center; background:radial-gradient(60% 60% at 30% 30%, rgba(57,255,20,.28), transparent 70%), linear-gradient(145deg, #0d0f0e, #0a0c0b); box-shadow:inset 0 0 8px rgba(57,255,20,.2), 0 0 12px rgba(57,255,20,.18)}
-
-    /* Seções */
     section{max-width:1200px; margin:0 auto; padding:72px 20px}
     h2{font-size:clamp(1.6rem, 1.1vw + 1rem, 2rem); margin:0 0 14px}
     .lead{color:var(--muted); max-width:70ch}
-
-    /* Fundador (foto maior e nítida) */
     .founder{display:grid; grid-template-columns:360px 1fr; gap:20px; align-items:center; background:linear-gradient(180deg, #0c110d, #090c0a); border:1px solid var(--border); border-radius:16px; padding:16px}
     .avatar{width:100%; aspect-ratio: 1/1; border-radius:16px; overflow:hidden; position:relative; border:1px solid rgba(16,124,16,.35)}
     .avatar img{width:100%; height:100%; object-fit:cover; image-rendering:-webkit-optimize-contrast; filter: contrast(1.08) saturate(1.06);}
-
-    /* Cards diferenciais */
     .cards{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:14px}
     .card{background:linear-gradient(180deg, #0c110d, #080b09); border:1px solid var(--border); border-radius:14px; padding:16px; transition:.2s; transform-style:preserve-3d; perspective:800px}
     .card:hover{transform:translateY(-4px) rotateX(2deg) rotateY(-2deg); box-shadow:0 14px 40px rgba(16,124,16,.18)}
     .kpi{color:#bfe9c3; font-weight:600}
-
-    /* Portfólio (ajuste + zoom ao clicar, sem sair da página) */
     .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
     .thumb{position:relative; overflow:hidden; border-radius:12px; border:1px solid var(--border); cursor:zoom-in}
     .thumb img{width:100%; height:220px; object-fit:cover; transition: transform .35s ease; will-change:transform}
     .thumb:hover img{transform:scale(1.04)}
-
-    /* Overlay de zoom */
     .zoom-overlay{position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:60}
     .zoom-overlay.active{display:flex}
     .zoom-img-wrap{max-width:min(92vw,1200px); max-height:88vh; border-radius:14px; overflow:hidden; border:1px solid var(--border); background:#000; box-shadow:0 0 24px rgba(57,255,20,.25)}
@@ -124,8 +113,6 @@
     .zoom-controls{position:fixed; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:65}
     .btn{background: radial-gradient(70% 70% at 30% 30%, rgba(57,255,20,.3), rgba(16,124,16,.6)); border:1px solid rgba(57,255,20,.6); box-shadow:0 0 14px rgba(57,255,20,.35); color:#041004; padding:10px 12px; border-radius:10px; font-weight:700; cursor:pointer}
     .btn:active{transform:translateY(1px)}
-
-    /* Contato e rodapé */
     .pay-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:12px}
     .pay{background:linear-gradient(180deg, #0b0f0c, #080b09); border:1px solid var(--border); border-radius:12px; padding:14px}
     .two{display:grid; grid-template-columns:1.2fr .8fr; gap:20px; align-items:center}
@@ -134,12 +121,8 @@
     .contact a{display:flex; align-items:center; gap:10px; padding:12px 14px; border:1px solid var(--border); border-radius:12px; background:linear-gradient(180deg,#0b0f0c,#080b09)}
     footer{border-top:1px solid var(--border); background:#070707}
     .foot{max-width:1200px; margin:0 auto; padding:22px 20px; display:flex; justify-content:space-between; gap:16px; color:#cfead1}
-
-    /* Voltar ao topo */
     .to-top{position:fixed; right:16px; bottom:16px; width:46px; height:46px; border-radius:12px; display:grid; place-items:center; cursor:pointer; background: radial-gradient(70% 70% at 30% 30%, rgba(57,255,20,.3), rgba(16,124,16,.6)); border:1px solid rgba(57,255,20,.6); box-shadow:0 0 18px rgba(57,255,20,.35); transition: transform .15s ease; z-index:40}
     .to-top:hover{transform:translateY(-2px)}
-
-    /* Responsivo */
     @media (max-width: 1024px){
       .hero{grid-template-columns:1fr}
       .two{grid-template-columns:1fr}
@@ -160,8 +143,6 @@
 </head>
 <body>
   <div class="particles" aria-hidden="true"></div>
-
-  <!-- Cabeçalho / Menu -->
   <header id="topo">
     <div class="nav">
       <div class="logo">
@@ -177,14 +158,11 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <!-- ÚNICO botão com degradê verde e “piscar” acessível -->
       <a class="cta-global" href="https://wa.me/5518991728486?text=Ol%C3%A1%20Leonardo!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20planilha." target="_blank" rel="noopener">
         💬 FAÇA UM ORÇAMENTO
       </a>
     </div>
   </header>
-
-  <!-- Hero -->
   <section id="inicio" class="hero">
     <div>
       <h1>Planilhas profissionais em Excel e VBA para acelerar decisões</h1>
@@ -206,8 +184,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Sobre o Fundador -->
   <section id="sobre">
     <h2>Sobre o Fundador</h2>
     <div class="founder">
@@ -221,14 +197,10 @@
       </div>
     </div>
   </section>
-
-  <!-- Sobre a Empresa -->
   <section>
     <h2>Sobre a Empresa</h2>
     <p class="lead">A SpeedPlan nasceu com o propósito de tornar o Excel uma ferramenta poderosa e automatizada para negócios de todos os tamanhos. Atuamos em todo o Brasil com desenvolvimento, automação e aprimoramento de planilhas personalizadas, sempre com foco em resultados e praticidade.</p>
   </section>
-
-  <!-- Missão, Valores e Frase -->
   <section>
     <h2>Missão, Valores e Frase</h2>
     <div class="cols-3">
@@ -251,8 +223,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Diferenciais -->
   <section id="servicos">
     <h2>Diferenciais SpeedPlan</h2>
     <div class="cards">
@@ -264,8 +234,6 @@
       <div class="card"><h4>Total sigilo e segurança dos dados</h4><p>Confidencialidade e proteção como prioridade.</p></div>
     </div>
   </section>
-
-  <!-- Portfólio / Trabalhos Realizados (novos links) -->
   <section id="portfolio">
     <h2>Portfólio / Trabalhos Realizados</h2>
     <p class="lead">As imagens se ajustam ao espaço e, ao clicar, você pode aproximar em overlay com controles de zoom.</p>
@@ -278,8 +246,6 @@
       <div class="thumb"><img src="https://i.imgur.com/9yL6dh7.jpg" alt="Planilha personalizada SpeedPlan 6" loading="lazy" data-full="https://i.imgur.com/9yL6dh7.jpg"></div>
     </div>
   </section>
-
-  <!-- Formas de Pagamento -->
   <section>
     <h2>Formas de Pagamento</h2>
     <div class="pay-grid">
@@ -290,14 +256,10 @@
       <div class="pay"><strong>✔️ Emissão de nota fiscal — CNPJ: 60.771.803/0001-71</strong></div>
     </div>
   </section>
-
-  <!-- Reunião de Alinhamento -->
   <section>
     <h2>Reunião de Alinhamento</h2>
     <p class="lead">Antes de iniciar o projeto, realizamos uma reunião gratuita para entender objetivo da planilha, funcionalidades desejadas, layout e automações, além do prazo e cronograma de entrega.</p>
   </section>
-
-  <!-- Suporte Pós-Entrega -->
   <section>
     <h2>Suporte Pós-Entrega</h2>
     <div class="cols-2">
@@ -316,8 +278,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Contato -->
   <section id="contato">
     <h2>Contato</h2>
     <div class="cols-3 contact">
@@ -326,19 +286,13 @@
       <a href="https://instagram.com/speed.plan" target="_blank" rel="noopener">📷 Instagram: @speed.plan</a>
     </div>
   </section>
-
-  <!-- Rodapé -->
   <footer>
     <div class="foot">
       <div>© 2025 SPEEDPLAN Desenvolvimento — Excel e VBA Profissional.</div>
       <div>Desenvolvido por Leonardo | Todos os direitos reservados.</div>
     </div>
   </footer>
-
-  <!-- Voltar ao Topo -->
   <button class="to-top" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️</button>
-
-  <!-- Zoom overlay script -->
   <script>
     (function(){
       const overlay = document.createElement('div');
